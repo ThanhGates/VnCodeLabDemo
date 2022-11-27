@@ -4481,8 +4481,8 @@
 
     function sc(a) {
         a = a.ga;
-        return R('<div id="drawer">Drawer</div><div id="codelab-title"><div id="codelab-nav-buttons"><a href="' + hc(mc(a)) + '" id="arrow-back"><i class="material-icons">close</i></a><a href="#" id="menu"><i class="material-icons">menu</i></a></div><div class="codelab-time-container"></div></div><div id="main"><div id="steps"></div>' +
-            hc(mc(a)) + '" </div>')
+        return R('<div id="drawer">Drawer</div><div id="codelab-title"><div id="codelab-nav-buttons"><a href="' + hc(mc(a)) + '" id="arrow-back"><i class="material-icons">close</i></a><a href="#" id="menu"><i class="material-icons">menu</i></a></div><div class="codelab-time-container"></div><devsite-user></devsite-user></div><div id="main"><div id="steps"></div><div id="controls"><div id="fabs"><a href="#" id="previous-step" title="Previous step">Back</a><div class="spacer"></div><a href="#" id="next-step" title="Next step">Next</a><a href="' +
+            hc(mc(a)) + '" id="done" hidden title="Codelab complete">Done</a></div></div></div>')
     }
 
     function tc(a) {
@@ -4501,6 +4501,7 @@
             var f = b[e];
             c += '<li><a href="#' + hc(e) + '"><span class="step"><span>' + gc(f) + "</span></span></a></li>"
         }
+        c += '</ol></div>';
         return R(c)
     };
 
@@ -5029,7 +5030,10 @@
         a.f = a.querySelector("#drawer");
         a.l = a.querySelector("#codelab-title");
         a.ba = a.querySelector("#steps");
-        
+        a.H = a.querySelector("#controls");
+        a.A = a.querySelector("#controls #previous-step");
+        a.w = a.querySelector("#controls #next-step");
+        a.I = a.querySelector("#controls #done");
         a.c.forEach(function (b) {
             a.ba.appendChild(b)
         });
