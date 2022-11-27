@@ -41,6 +41,7 @@ google-codelab-about .about-card .material-icons {
     position: relative
 }
 
+/*# sourceMappingURL=google_codelab_about_scss_bin.css.map */
 google-codelab-step {
     line-height: 24px;
     display: block
@@ -71,55 +72,6 @@ google-codelab-step pre {
 google-codelab-step pre > code {
     padding: 0;
     background-color: transparent
-}
-
-google-codelab-step code em {
-    color: #97C8F2
-}
-
-google-codelab-step pre .str, google-codelab-step code .str {
-    color: #34A853
-}
-
-google-codelab-step pre .kwd, google-codelab-step code .kwd {
-    color: #F538A0
-}
-
-google-codelab-step pre .com, google-codelab-step code .com {
-    color: #BDC1C6;
-    font-style: italic
-}
-
-google-codelab-step pre .typ, google-codelab-step code .typ {
-    color: #24C1E0
-}
-
-google-codelab-step pre .lit, google-codelab-step code .lit {
-    color: #4285F4
-}
-
-google-codelab-step pre .pun, google-codelab-step code .pun {
-    color: #F8F9FA
-}
-
-google-codelab-step pre .pln, google-codelab-step code .pln {
-    color: #F8F9FA
-}
-
-google-codelab-step pre .tag, google-codelab-step code .tag {
-    color: #24C1E0
-}
-
-google-codelab-step pre .atn, google-codelab-step code .atn {
-    color: #EDA912
-}
-
-google-codelab-step pre .atv, google-codelab-step code .atv {
-    color: #34A853
-}
-
-google-codelab-step pre .dec, google-codelab-step code .dec {
-    color: #5195EA
 }
 
 google-codelab-step paper-button {
@@ -425,6 +377,7 @@ google-codelab-step .embedded-iframe {
     max-height: 51vw
 }
 
+/*# sourceMappingURL=google_codelab_step_scss_bin.css.map */
 google-codelab-survey {
     visibility: hidden
 }
@@ -511,6 +464,7 @@ google-codelab-survey .option-text {
     background: #3f51b5
 }
 
+/*# sourceMappingURL=google_codelab_survey_scss_bin.css.map */
 html, body {
     height: 100%;
     width: 100%;
@@ -927,6 +881,8 @@ google-codelab google-codelab-step[animating] {
     position: absolute;
     overflow: hidden
 }
+
+/*# sourceMappingURL=google_codelab_scss_bin.css.map */
 
 .slide .instructions .step-title {
     font-size: 30px !important;

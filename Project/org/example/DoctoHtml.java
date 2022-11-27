@@ -35,8 +35,7 @@ public class DoctoHtml {
      */
     private static final String TOKENS_DIRECTORY_PATH = "tokens";
     private static final String DOCUMENT_ID = "1Eoxua9HKtgzhpFo73u7FV0LH96iTH6VGUUpIQLGsknI";
-    //1MY7BEv5VXIdYU8dG4kYhroI-Bw3yQsc6oD_LlAhGdyE
-    //1pHC6jq3B-zb0YBMHndqsd-CEY0hUc437n5w7FZuAAWQ
+
     /**
      * Global instance of the scopes required by this quickstart.
      * If modifying these scopes, delete your previously saved tokens/ folder.
@@ -160,10 +159,7 @@ public class DoctoHtml {
                         }
 
                     }
-                    /*if (color == null) {
 
-                        container.append("<pre><code>" + sb + "</code></pre>");
-                    }*/
                     if (color == null) {
                         container.append("<div class=\"block-code\">");
                         container.append("<pre><code>" + sb + "</code></pre>");
@@ -180,9 +176,7 @@ public class DoctoHtml {
                                     t.append(readParagraphElement(tableContent.get(p).getParagraph().getElements().get(q)));
                                 }
                                 if (tableContent.get(p).getParagraph().getBullet() != null) {
-                                    /*if (p == 1) {
-                                                container.append("<paper-radio-group>");
-                                    }*/
+
                                     container.append("<div class=\"survey-question-options\">");
                                     container.append("<label class=\"survey-option-wrapper\" id=\""+t+"\" for=\"tiu--cu-hi--text\">");
                                     container.append("<span class=\"option-text\">" + t + "</span>");
@@ -234,12 +228,9 @@ public class DoctoHtml {
                         case HEADING_1 -> {
                             menu.append("\n<li><a href=\"#"+id+"\"> <span class=\"step\">" + sb + "</span></a></li>");
                             if(id!=0){
-                                container.append("</div></div></div></google-codelab-step>");
+                                container.append("</google-codelab-step>");
                             }
-                            container.append("<google-codelab-step label=\""+sb+"\" duration=\"0\" step=\""+ ++id +"\" style=\"transform: translate3d(0px, 0px, 0px);\" selected=\"\">");
-                            container.append("<div class=\"instructions\"><div class=\"inner\">");
-                            container.append("<div id=\"steps\">");
-                            container.append("<h2 is-upgraded=\"\" class=\"step-title\">" + sb + "</h2>\n");
+                            container.append("<google-codelab-step label=\""+sb+"\" duration=\"0\" step=\""+ ++id +"\" style=\"transform: translate3d(0px, 0px, 0px);\">");
                         }
                         case HEADING_2 -> container.append("<h2>" + sb + "</h2>\n");
                         case HEADING_3 -> container.append("<h3>" + sb + "</h3>\n");
@@ -294,9 +285,8 @@ public class DoctoHtml {
                     "            <div class=\"steps\"><ol>"+menu+"</ol></div></div>");
             fileWriter.write(""+container);
             //fileWriter.write("<div class=\"inner\">"+container+"</div>");
-            fileWriter.write("</div></div></google-codelab-step></div></div></google-codelab></lab>");
+            fileWriter.write("</google-codelab-step></div></google-codelab></lab>");
             fileWriter.write("<script src=\"./native-shim.js\"></script>\n" +
-                    "        <script src=\"./custom-elements.min.js\"></script>\n" +
                     "        <script src=\"./prettify.js\"></script>\n" +
                     "        <script src=\"./codelab-elements.js\"></script>\n" +
                     "        <script src=\"//support.google.com/inapp/api.js\"></script>");
@@ -307,7 +297,5 @@ public class DoctoHtml {
         } catch (FileNotFoundException e) {
             System.out.println("Error");
         }
-        //System.out.printf("The title of the doc is: %s\n", menu);
-        //System.out.printf("The title of the doc is: %s\n", response.getBody());
     }
 }
